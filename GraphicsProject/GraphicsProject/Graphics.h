@@ -5,6 +5,9 @@
 #include "Window.h"
 #include "Debug.h"
 #include "Time.h"
+#include "Line.h"
+#include "Triangle.h"
+#include "Square.h"
 
 class Graphics {
 public:
