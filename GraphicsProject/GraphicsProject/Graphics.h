@@ -8,6 +8,8 @@
 #include "Line.h"
 #include "Triangle.h"
 #include "Square.h"
+#include "Cube.h"
+
 
 class Graphics {
 public:

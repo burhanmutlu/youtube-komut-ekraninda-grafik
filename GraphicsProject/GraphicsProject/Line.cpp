@@ -31,7 +31,7 @@ void Line::drawLine(int x1, int y1, int x2, int y2) {
         }
     }
     // Son noktayý çiz
-    SetPixel(this->w->getconsoleDC(), x2, y2, RGB(255, 255, 255));
+    SetPixel(this->w->getconsoleDC(), x2, y2, color);
 }
 
 void Line::setColor(COLORREF color) {
@@ -52,6 +52,6 @@ void Line::drawPoly(int n_points, std::list<Point*> points) {
         this->color = RGB(rand() % 255, rand() % 255, rand() % 255);
         drawLine((*itr)->x, (*itr)->y, (*itr2)->x, (*itr2)->y);
         itr++; itr2++;
-        Sleep(100);
+        Sleep(10);
     }
 }

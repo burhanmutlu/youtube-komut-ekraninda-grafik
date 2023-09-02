@@ -120,3 +120,43 @@
 
 
 	w->~Window();*/
+
+
+/* çoklu noktalar
+srand(time(NULL));
+Time* t = new Time();
+Debug* d = new Debug();
+Circle* c = new Circle();
+Line* l = new Line();
+Triangle* triangle = new Triangle();
+Square* s = new Square();
+
+list<Point*> points = { new Point(0,0) };
+int N = 400;
+for (int i = 0; i < N; i++) {
+	points.push_back(new Point(rand() % 800, rand() % 400));
+}
+
+
+l->drawPoly(10, points);
+*/
+
+
+/* qr code oluþturma
+int width = 300;
+int height = 300;
+int x = 20, y = 20;
+int boyut = 5;
+s->drawSquare(new Point(x, y), width, height);
+for (int i = 0; i < height / boyut; i++) {
+	for (int j = 0; j < width / boyut; j++) {
+		if (rand() % 2 == 0) {
+			s->fillSquare(new Point(x + (j * boyut), y + (i * boyut)), boyut, boyut, RGB(255, 0, 0));
+		}
+		else {
+			s->fillSquare(new Point(x + (j * boyut), y + (i * boyut)), boyut, boyut, RGB(255, 255, 255));
+		}
+
+	}
+}
+*/
