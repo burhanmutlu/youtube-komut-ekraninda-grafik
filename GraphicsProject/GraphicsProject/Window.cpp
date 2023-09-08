@@ -31,13 +31,13 @@ HDC Window::getconsoleDC() {
 int Window::getWindowWidth() {
 	GetConsoleScreenBufferInfo(consoleHandle, &csbi);
 	width = csbi.srWindow.Right - csbi.srWindow.Left + 1;
-	return width;
+	return width*8;
 }
 
 int Window::getWindowHeight() {
 	GetConsoleScreenBufferInfo(consoleHandle, &csbi);
 	height = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
-	return height;
+	return height*16;
 }
 
 void Window::setBgColor(COLORREF bgColor) {
@@ -86,11 +86,22 @@ void Window::funmap() {
 }
 
 void Window::clearDevice() {
-	for (int y = 0; y < getWindowHeight()*16; y++) {
-		for (int x = 0; x < getWindowWidth()*8; x++) {
-			SetPixel(consoleDC, x, y, bgColor);
-		}
+	HANDLE hStdOut;
+
+	hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	DWORD mode = 0;
+
+	const DWORD originalMode = mode;
+	mode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+
+	DWORD written = 0;
+	PCWSTR sequence = L"\x1b[2J";
+	if (!WriteConsoleW(hStdOut, sequence, (DWORD)wcslen(sequence), &written, NULL))
+	{
+		SetConsoleMode(hStdOut, originalMode);
 	}
-	//
-	//SetConsoleCursorPosition(consoleHandle, {2000,2000});
+
+	SetConsoleMode(hStdOut, originalMode);
+
 }

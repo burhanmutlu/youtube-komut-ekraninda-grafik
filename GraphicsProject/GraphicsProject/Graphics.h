@@ -9,6 +9,7 @@
 #include "Triangle.h"
 #include "Square.h"
 #include "Cube.h"
+#include "Color.h"
 
 
 class Graphics {
