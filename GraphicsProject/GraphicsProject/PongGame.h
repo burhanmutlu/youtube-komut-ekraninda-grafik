@@ -4,6 +4,7 @@
 #include "Square.h"
 #include "Point.h"
 #include "Color.h"
+#include "Line.h"
 #include <stdlib.h>
 #include <conio.h>
 #include <string>
@@ -19,12 +20,13 @@ class PongGame
 {
 public:
 	PongGame();
-	void drawScene();
 	void setGameSpeed(gameLevel level);
 	void setBgColor(BgColors color);
 	void setPixelColor(COLORREF color);
 	void play();
 private:
+	void drawScene();
+	void drawBall();
 	void hideBall();
 	void hideRacket();
 	void hideOtoRacket();
@@ -32,6 +34,8 @@ private:
 	Window* w;
 	Square* s;
 	Color* c;
+	Line* line;
+
 	int kenarYukseklik;
 	int x;
 	int y;
@@ -48,6 +52,9 @@ private:
 	int otoDy;
 	int topBoyut;
 	int gameSpeed;
+	bool isStart;
+	int firstPlayerScore;
+	int secondPlayerScore;
 	COLORREF bgColor;
 	COLORREF pixelColor;
 

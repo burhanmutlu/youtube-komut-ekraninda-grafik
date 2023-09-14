@@ -35,8 +35,8 @@ int main()
 
 	PongGame* pongGame = new PongGame();
 
-	pongGame->drawScene();
 	pongGame->setGameSpeed(medium);
+	pongGame->setPixelColor(RGB(250, 2, 255));
 	pongGame->setBgColor(Red);
 
 	pongGame->play();

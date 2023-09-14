@@ -3,21 +3,21 @@
 Color::Color() {
 	w = new Window();
 	colorsValue[0] = RGB(0, 0, 0);
-	colorsValue[1] = RGB(0, 0, 255);
-	colorsValue[2] = RGB(0, 128, 0);
-	colorsValue[3] = RGB(0, 255, 255);
-	colorsValue[4] = RGB(255, 0, 0);
-	colorsValue[5] = RGB(128, 0, 128);
-	colorsValue[6] = RGB(255, 255, 0);
-	colorsValue[7] = RGB(255, 255, 255);
-	colorsValue[8] = RGB(128, 128, 128);
-	colorsValue[9] = RGB(173, 216, 230);
-	colorsValue[10] = RGB(144, 238, 144);
-	colorsValue[11] = RGB(173, 216, 230);
-	colorsValue[12] = RGB(255, 182, 193);
-	colorsValue[13] = RGB(221, 160, 221);
-	colorsValue[14] = RGB(255, 255, 224);
-	colorsValue[15] = RGB(255, 255, 255);
+	colorsValue[1] = RGB(0, 55, 218);
+	colorsValue[2] = RGB(19, 161, 14);
+	colorsValue[3] = RGB(58, 150, 221);
+	colorsValue[4] = RGB(197, 15, 31);
+	colorsValue[5] = RGB(136, 23, 152);
+	colorsValue[6] = RGB(193, 156, 0);
+	colorsValue[7] = RGB(204, 204, 204);
+	colorsValue[8] = RGB(118, 118, 118);
+	colorsValue[9] = RGB(59, 120, 255);
+	colorsValue[10] = RGB(22, 198, 12);
+	colorsValue[11] = RGB(97, 214, 214);
+	colorsValue[12] = RGB(231, 72, 86);
+	colorsValue[13] = RGB(180, 0, 158);
+	colorsValue[14] = RGB(249, 241, 165);
+	colorsValue[15] = RGB(242, 242, 242);
 }
 
 
