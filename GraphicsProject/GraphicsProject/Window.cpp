@@ -86,10 +86,7 @@ void Window::funmap() {
 }
 
 void Window::clearDevice() {
-	HANDLE hStdOut;
-
-	hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-
+	
 	DWORD mode = 0;
 
 	const DWORD originalMode = mode;
@@ -97,11 +94,11 @@ void Window::clearDevice() {
 
 	DWORD written = 0;
 	PCWSTR sequence = L"\x1b[2J";
-	if (!WriteConsoleW(hStdOut, sequence, (DWORD)wcslen(sequence), &written, NULL))
+	if (!WriteConsoleW(consoleHandle, sequence, (DWORD)wcslen(sequence), &written, NULL))
 	{
-		SetConsoleMode(hStdOut, originalMode);
+		SetConsoleMode(consoleHandle, originalMode);
 	}
 
-	SetConsoleMode(hStdOut, originalMode);
+	SetConsoleMode(consoleHandle, originalMode);
 
 }

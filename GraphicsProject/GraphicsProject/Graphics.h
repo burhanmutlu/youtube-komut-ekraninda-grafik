@@ -10,6 +10,7 @@
 #include "Square.h"
 #include "Cube.h"
 #include "Color.h"
+#include "PongGame.h"
 
 
 class Graphics {
