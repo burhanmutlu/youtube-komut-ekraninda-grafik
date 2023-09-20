@@ -156,7 +156,7 @@ void PongGame::play() {
 				std::cout << (char)7;
 				system("cls");
 				std::cout << "Skor: " << firstPlayerScore << " - " << secondPlayerScore;
-				std::cout << "Tekrar oynamak icin bir tusa basiniz.";
+				std::cout << "\nTekrar oynamak icin bir tusa basiniz.";
 				
 				
 				if ( _getch() ) {
